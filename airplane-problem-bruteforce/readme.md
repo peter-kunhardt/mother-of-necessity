@@ -1,5 +1,6 @@
 # Brute Forcing the Airplane Problem
 
+## Background:
 A common algorithmic thinking interview question asks the candidate to consider:
 - An airplane with 100 seats
 - Passengers line up at random with assigned seats
@@ -12,10 +13,10 @@ The somewhat counterintuitive answer is 50%. You can model every passenger with 
 - The passenger's seat is taken and they randomly sit in passenger **1's** seat, resolving the problem and letting all other passengers board normally
 - The passenger's seat is taken and they randomly sit in passenger **100's** seat, meaning it will be taken when passenger 100 gets there.
 
-In all other cases the function continues until all passengers seats are resolved. If the exit conditions of the function are equally likely
-at each step, (and they are) 
+In all other cases the function continues until all passengers seats are resolved. If the exit conditions of the function are equally likely at each step, (and they are) then it's basically like flipping a coin and re-flipping it when it lands on an edge. 
+(Which it seems to do a suspicious amount of the time) The coin flips are independent so the odds are always 50/50.
 
-## Yeah but who needs abstract thinking when you can just prove it?
+## Yeah but what if I don't believe you?
 
 This is one of those problems in probability where some folk just won't believe you until you put it in front of them. 
 
