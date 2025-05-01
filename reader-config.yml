@@ -9,8 +9,9 @@ executables:
           - "Simulate 50k & Summarize": "python proof.py"
 
   technical-assessments:
-    json-validation:
-      validate_balance_sheet_json.py:
-        commands:
-          - "Validate Original": "python \"validation script.py\" --file balance_sheet_imports.json"
-          - "Validate Error-Ridden Version": "python \"validation script.py\" --file balance_sheet_imports_with_fake_errors.json"
+    validating-hierarchical-json:
+      json-validation:
+        validate_balance_sheet_json.py:
+          commands:
+            - "Validate Original": "python \"validation script.py\" --file balance_sheet_imports.json"
+            - "Validate Error-Ridden Version": "python \"validation script.py\" --file balance_sheet_imports_with_fake_errors.json"
