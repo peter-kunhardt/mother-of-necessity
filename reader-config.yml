@@ -1,0 +1,23 @@
+name: "mother-of-necessity"
+
+run_commands:
+  misc-fun:
+    airplane-problem-bruteforce: 
+      proof.py: 
+        "Simulate Once": 
+          command: "python -c \"import proof; passenger_order = proof.generate_random_passenger_order(); proof.fill_cabin(passenger_order)\""
+        "Simulate 50k & Summarize": 
+          command: "python proof.py"
+
+  streamlit-example:
+    app.py: 
+      "Launch Streamlit":
+        command: "streamlit run app.py"
+
+  technical-assessments:
+    json-validation:
+      validate_balance_sheet_json.py:
+        "Validate Original":
+          command: "python \"validation script.py\" --file balance_sheet_imports.json"
+        "Validate Error-Ridden Version":
+          command: "python \"validation script.py\" --file balance_sheet_imports_with_fake_errors.json"
