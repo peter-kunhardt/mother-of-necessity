@@ -58,10 +58,13 @@ def generate_fills(num_fills):
             "first_pass_correctly_seated": first_is_seated_in_own_seat,})
     return results
 
-if __name__ == "__main__":
+def main():
     num_fills = 50000
     results = generate_fills(num_fills)
     print("After generating " + str(num_fills) + " fills, the last passenger was seated in their own seat " + 
       str(sum([1 for result in results if result["last_pass_correctly_seated"]]) / num_fills * 100) + "% of the time.")
     print("After generating " + str(num_fills) + " fills, the first passenger was seated in their own seat " + 
       str(sum([1 for result in results if result["first_pass_correctly_seated"]]) / num_fills * 100) + "% of the time.")
+
+if __name__ == "__main__":
+    main()

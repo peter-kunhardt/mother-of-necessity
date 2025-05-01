@@ -100,11 +100,11 @@ def validate_json(data):
         "validation_errors": validation_errors
     }
 
-# Run the script
-if __name__ == "__main__":
+
+def main(cli_args=None): 
     parser = argparse.ArgumentParser(description="Validate a financial JSON file.")
     parser.add_argument("--file", "-f", required=True, help="Path to the financial JSON file")
-    args = parser.parse_args()
+    args = parser.parse_args(cli_args)
 
     with open(args.file, "r") as f:
         data = json.load(f)
@@ -114,3 +114,6 @@ if __name__ == "__main__":
 
     if not result["is_validated"]:
         exit(1)
+
+if __name__ == "__main__":
+    main()
