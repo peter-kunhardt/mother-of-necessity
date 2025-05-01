@@ -4,21 +4,13 @@ executables:
   misc-fun:
     airplane-problem-bruteforce: 
       proof.py:
-        tags: [ "probability", "python" ]
         commands:
           - "Simulate Once": "python -c \"import proof; passenger_order = proof.generate_random_passenger_order(); proof.fill_cabin(passenger_order)\""
           - "Simulate 50k & Summarize": "python proof.py"
 
-  streamlit-example:
-    app.py: 
-      tags: [ "dashboards" ]
-      commands:
-        - "Launch Streamlit": "streamlit run app.py"
-
   technical-assessments:
     json-validation:
       validate_balance_sheet_json.py:
-        tags: [ "transform", "ETL", "python" ]
         commands:
           - "Validate Original": "python \"validation script.py\" --file balance_sheet_imports.json"
           - "Validate Error-Ridden Version": "python \"validation script.py\" --file balance_sheet_imports_with_fake_errors.json"
