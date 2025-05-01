@@ -13,5 +13,5 @@ executables:
       json-validation:
         validate_balance_sheet_json.py:
           commands:
-            - "Validate Original": "python \"validation script.py\" --file balance_sheet_imports.json"
-            - "Validate Error-Ridden Version": "python \"validation script.py\" --file balance_sheet_imports_with_fake_errors.json"
+            - "Validate Original": "python \"validate_balance_sheet.py\" --file balance_sheet_imports.json"
+            - "Validate Error-Ridden Version": "python \"validate_balance_sheet.py\" --file balance_sheet_imports_with_fake_errors.json"
