@@ -101,10 +101,10 @@ def validate_json(data):
     }
 
 
-def main(): 
+def main(cli_args=None): 
     parser = argparse.ArgumentParser(description="Validate a financial JSON file.")
     parser.add_argument("--file", "-f", required=True, help="Path to the financial JSON file")
-    args = parser.parse_args()
+    args = parser.parse_args(cli_args)
 
     with open(args.file, "r") as f:
         data = json.load(f)
