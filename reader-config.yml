@@ -8,7 +8,8 @@ executables:
           - "Simulate Once": |
             "import proof;"
             "passenger_order = proof.generate_random_passenger_order();"
-            "proof.fill_cabin(passenger_order);"
+            "results = proof.fill_cabin(passenger_order);"
+            "print(results);"
           - "Simulate 50k & Summarize": |
             "import proof;"
             "proof.main();"
