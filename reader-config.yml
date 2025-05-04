@@ -3,14 +3,18 @@ author_fullname: "Pete Kunhardt"
 preferred_name: "kunhardt"
 
 
-tiles:
+projects:
 
   "The Airplane Problem":
-    subtiles:
+    description: |
+      Brute forcing the classic algorithmic thinking problem to win an internet argument.
+    tags:
+      - "probability"
+      - "python"
+      - "recursion"
+    elements:
       - readme: "/misc-fun/airplane-problem-bruteforce/README.md"
-        position: "left"
       - code: "/misc-fun/airplane-problem-bruteforce/proof.py"
-        position: "center"
       - commands:
         - "Simulate Once": |
           "import proof;"
@@ -20,15 +24,18 @@ tiles:
         - "Simulate 50k & Summarize": |
           "import proof;"
           "proof.main();"
-        position: "right"
 
 
   "Validating Hierarchical JSON":
-    subtiles:
+    desctription: |
+      Validating and warehousing an uncertain-depth hierarchical JSON balance sheet.
+    tags:
+      - "ETL"
+      - "json"
+      - "python"
+    elements:
       - readme: "/technical-assessments/validating-hierarchical-json/README.md"
-        position: "left"
       - code: "/technical-assessments/validating-hierarchical-json/validate_balance_sheet_json.py"
-        position: "left"
       - commands:
         - "Validate Original": |
           "import validate_balance_sheet_json as vdate;"
@@ -36,4 +43,3 @@ tiles:
         - "Validate Error-Ridden Version": |
           "import validate_balance_sheet_json as vdate;"
           "vdate.main([\"--file\", \"json-validation/balance_sheet_imports_with_fake_errors.json\"]);"
-        position: "right"
