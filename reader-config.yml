@@ -2,7 +2,6 @@ project_name: "mother-of-necessity"
 author_fullname: "Pete Kunhardt"
 preferred_name: "kunhardt"
 
-
 projects:
 
   "The Airplane Problem":
@@ -42,4 +41,5 @@ projects:
           "vdate.main([\"--file\", \"json-validation/balance_sheet_imports.json\"]);"
         - "Validate Error-Ridden Version": |
           "import validate_balance_sheet_json as vdate;"
+          "vdate.main([\"--file\", \"json-validation/balance_sheet_imports_with_fake_errors.json\"]);"
           "vdate.main([\"--file\", \"json-validation/balance_sheet_imports_with_fake_errors.json\"]);"
