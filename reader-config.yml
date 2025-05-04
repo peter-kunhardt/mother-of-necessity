@@ -1,26 +1,31 @@
 name: "mother-of-necessity"
 
-executables:
-  misc-fun:
-    airplane-problem-bruteforce: 
-      proof.py:
-        commands:
-          - "Simulate Once": |
-            "import proof;"
-            "passenger_order = proof.generate_random_passenger_order();"
-            "results = proof.fill_cabin(passenger_order);"
-            "print(results);"
-          - "Simulate 50k & Summarize": |
-            "import proof;"
-            "proof.main();"
 
-  technical-assessments:
-    validating-hierarchical-json:
-      validate_balance_sheet_json.py:
-        commands:
-          - "Validate Original": |
-            "import validate_balance_sheet_json as vdate;"
-            "vdate.main([\"--file\", \"json-validation/balance_sheet_imports.json\"]);"
-          - "Validate Error-Ridden Version": |
-            "import validate_balance_sheet_json as vdate;"
-            "vdate.main([\"--file\", \"json-validation/balance_sheet_imports_with_fake_errors.json\"]);"
+tiles:
+
+  "The Airplane Problem":
+    readme_path: "/misc-fun/airplane-problem-bruteforce/README.md"
+    code_path: "/misc-fun/airplane-problem-bruteforce/proof.py"
+    style: "triptych"
+    commands:
+      - "Simulate Once": |
+        "import proof;"
+        "passenger_order = proof.generate_random_passenger_order();"
+        "results = proof.fill_cabin(passenger_order);"
+        "print(results);"
+      - "Simulate 50k & Summarize": |
+        "import proof;"
+        "proof.main();"
+
+
+  "Validating Hierarchical JSON":
+    readme_path: "/technical-assessments/validating-hierarchical-json/README.md"
+    code_path: "/technical-assessments/validating-hierarchical-json/validate_balance_sheet_json.py"
+    style: "2-1tile"
+    commands:
+      - "Validate Original": |
+        "import validate_balance_sheet_json as vdate;"
+        "vdate.main([\"--file\", \"json-validation/balance_sheet_imports.json\"]);"
+      - "Validate Error-Ridden Version": |
+        "import validate_balance_sheet_json as vdate;"
+        "vdate.main([\"--file\", \"json-validation/balance_sheet_imports_with_fake_errors.json\"]);"
